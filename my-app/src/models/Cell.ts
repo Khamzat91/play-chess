@@ -7,5 +7,17 @@ export class Cell {
     readonly y: number;
     readonly color: Colors;
     figure: Figure | null;
-    board: Board
+    board: Board;
+    available: boolean;  // Можешь ли перемиститься
+    id: number; // Для реакт ключей
+
+    constructor(board: Board, x: number, y: number, color: Colors, figure: Figure | null) {
+this.x = x;
+this.y = y,
+this.color = color,
+this.figure = figure,
+this.board = board,
+this.available = false,
+this.id = Math.random()
+    }
 }
