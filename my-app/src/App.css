@@ -13,10 +13,16 @@
 
 
 .board{
-  width: calc(64*8);
-  height: calc(64*8);
+  width: calc(64px*8);
+  height: calc(64px*8);
   display: flex;
   flex-wrap: wrap;
+}
+
+.cell img {
+  width: 48px;
+  height: 48px;
+  position: relative;
 }
 
 .cell{
