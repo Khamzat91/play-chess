@@ -13,9 +13,10 @@ ROOK = "Ладья",
 BISHOP = "Слон",
 }
 
+
 export class Figure {
 color: Colors;
-logo: typeof logo | null;
+logo?: string;
 cell: Cell;
 name: FigureNames;
 id: number;
@@ -24,7 +25,6 @@ constructor(color: Colors, cell: Cell){
     this.color =color;
     this.cell = cell;
     this.cell.figure = this;
-    this.logo = null;
     this.name = FigureNames.FIGURE;
     this.id = Math.random()
 }
@@ -37,3 +37,4 @@ moveFigure(target: Cell) {
     
 }
 }
+
